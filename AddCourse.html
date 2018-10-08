@@ -1,0 +1,100 @@
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Add Course </title>
+</head>
+<script>
+function add() {
+    let n = ne.value; let m = Number(me.value); let f = Number(fe.value);
+    let ort = ((m+f)/2);
+    ar = [n,m,f]
+    ap = [n,ort]
+    a.push(ar);
+    sonuc.push(ap);
+
+  }
+ function printA(){
+  outA.innerText = "";
+  for (var i = 0; i < a.length; i++) {
+    for (var j = 0; j < a[i].length; j++) {
+
+        outA.innerHTML += ""+a[i][j]+'\u2003'+'\u2003';
+    }
+  outA.innerText +=  "\n" ;
+  }
+}
+function avg(){
+  outB.innerText = "";
+  for (var i = 0; i < sonuc.length; i++) {
+    for (var j = 0; j < sonuc[i].length; j++) {
+        outB.innerHTML += sonuc[i][j]+'\u2003'+'\u2003';
+    }
+  outB.innerText +=  "\n" ;
+  }
+}
+function maxi(){
+outC.innerText = "";
+var currentMax = Number(sonuc[0][1]);
+var x=0 ;
+for (var i = 0; i <sonuc.length; i++) {
+      if (currentMax < Number(sonuc[i][1])) {
+        currentMax = Number(sonuc[i][1]) ;
+        x = i;
+}
+  }
+  outC.innerHTML = sonuc[x][0]+'\u2003'+'\u2003'+currentMax;
+  console.log(sonuc[x][0]+" ve "+currentMax);
+}
+</script>
+<body>
+
+<h2 id=title></h2>
+<p>
+  Name &ensp;&ensp;  <input type=text   id=ne  style="width:10%"> </p>
+<p>
+  Midterm  &thinsp; <input type=number   id=me  style="width:10%"> </p>
+<p>
+  Final &ensp;&ensp; <input type=number   id=fe  style="width:10%"> </p>
+<p>
+  <input type=button value="Add"  onClick="add()"> </p>
+<p>
+  <input type=button value="Print"  onClick="printA()">
+  <input type=button value="Avg"  onClick="avg()">
+  <input type=button value="Max"  onClick="maxi()">
+</p>
+
+<hr />
+ <p>
+  <b>Name</b>
+  <b>Midterm</b>
+  <b>Final</b>
+</p>
+  <p id=outA >
+  
+       </p>
+<hr />
+  <p>
+  <b>Name</b>
+  <b>Average</b>
+</p>
+<p id=outB>
+
+</p>
+
+<hr />
+<p>
+<b>Name</b>
+<b>Max</b>
+</p>
+<p id=outC> </p>
+
+<script>
+
+    const a = []; // two dimensional array
+    const sonuc = [];
+
+</script>
+
+</body>
+</html>
