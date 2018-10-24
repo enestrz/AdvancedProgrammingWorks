@@ -66,7 +66,7 @@ class Course{
       super();
       this.course = new Course("BLM305","16:25","24.10.2018","B 121");
       this.student = new Student("12212210150","Enes Terzi","2,50","BLM305")
-      this.student = new Point(100,200);
+      this.point = new Point(100,200);
       this.point3d = new Point3D(100,200,300);
       this.distance = new Distance(20);
     }
