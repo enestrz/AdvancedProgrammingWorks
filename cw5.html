@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ClassWork #5 </title>
+</head>
+
+<script>
+    "use strict";
+    let local = []
+    let remote;
+    function fileSelect(evt) {
+        var files = evt.files;
+        for (let file of files) {
+            let reader = new FileReader();
+            reader.onload = function () {
+                local.push({ data: reader.result, name: file.name });
+            }
+            reader.readAsText(file);
+
+        }
+    }
+    function readText() {
+        fetch(url.value)
+            .then(r => r.text())
+            .then(t => remote = t).then(compare);
+    }
+    function compare() {
+
+        let text;
+        local.forEach(file => {
+            if(file.data == remote){
+                text = " "+file.name +" has the same content"
+            
+            }
+        }
+
+        )
+        out.innerText=""
+        out.innerText = local.length +" files reader"+ text;
+    }
+
+</script>
+
+<body>
+
+    <h2 id=title></h2>
+
+    <input type=text id=url value="">
+    <!--onChange="readText()"-->
+    <!-- <input type="file" id="files" name="files[]" onChange="fileSelect()" multiple /> -->
+    <input type=file id=button onChange='fileSelect(this)' multiple />
+    <input type=button value="ReadRemote" onClick="readText()">
+
+    <!-- <input type=button value="compare" onClick="compare()"> -->
+
+    <pre id=out></pre>
+
+    <hr />
+    <b>Sample code</b>
+    <pre id=sample></pre>
+    <hr />
+
+    <script>
+        title.innerText = document.title;
+
+    </script>
+
+</body>
+
+</html>
