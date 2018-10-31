@@ -4,3 +4,4 @@
 3. [Sum of Range](https://enestrz.github.io/AdvancedProgrammingWorks/sumofrange.png)
 4. [Inspector](https://enestrz.github.io/AdvancedProgrammingWorks/inspector.html)
 5. [Index](https://enestrz.github.io/AdvancedProgrammingWorks/index.html)
+6. [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/cw5.html) 
