@@ -5,3 +5,4 @@
 4. [Inspector](https://enestrz.github.io/AdvancedProgrammingWorks/inspector.html)
 5. [Index](https://enestrz.github.io/AdvancedProgrammingWorks/index1.html)
 6. [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/cw5.html) 
+7. [ClassWork 6](https://enestrz.github.io/AdvancedProgrammingWorks/cw6.html) 
