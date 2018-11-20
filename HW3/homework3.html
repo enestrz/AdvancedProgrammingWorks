@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+
+function moonWalk(){
+jpg.style.visibility = "visible"
+var mjDancing = [
+{transform: "translateX(0px)"},
+{transform: "translateX(600px)"}
+];
+var mjTiming = {
+  duration: 5000,
+  iterations: 1
+}
+setTimeout(function(){jpg2.style.visibility = "visible" }, 5000);
+ document.getElementById("jpg").animate(
+    mjDancing,mjTiming
+ );
+setTimeout(function(){jpg.style.visibility = "hidden" }, 5000);
+ /////////
+
+var mjDancing2 = [
+{transform: "translateX(0px)"},
+{transform: "translateX(-600px)"}
+];
+var mjTiming2 = {
+  duration: 5000,
+  iterations: 1,
+  delay: 5000
+}
+document.getElementById("jpg2").animate(
+   mjDancing2,mjTiming2
+);
+setTimeout(function(){jpg2.style.visibility = "hidden" }, 10000);
+
+
+}
+
+
+</script>
+<body style="background-image:url(moon.png)">
+  <div class="mj"><img id='jpg' src="mj.gif"  width="125" height="125"  align="right"style="visibility:hidden"></div>
+  <div class="mj2"><img id='jpg2' src="mj2.gif"  width="125" height="125"  align="right"style="visibility:hidden"></div>
+  <div class="buton"> <input type=button value="Moon Walk" onClick="moonWalk()">	</div>
+
+
+    <style>
+
+
+    	body{
+
+
+    	}
+    	.mj {
+
+     		position: absolute;
+    		 left: 200px;
+    		 top: 600px;
+
+    	}
+      .mj2 {
+
+     		position: absolute;
+    		 left: 800px;
+    		 top: 600px;
+
+    	}
+
+    	.buton {
+         position: absolute;
+        left: 400px;
+        top: 400px;
+    	}
+
+    </style>
+
+</body>
+
+</html>
