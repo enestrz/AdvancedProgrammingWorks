@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+    table, td {
+        border: 1px solid black;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="manifest" href="manifest.json">
+    <title>Class Work 7</title>
+</head>
+<table id="myTable"></table>
+<script>
+if ('serviceWorker' in navigator) {
+   navigator.serviceWorker
+     .register('sw.js')
+     .then((reg) => { console.log('SW Registered', reg) })
+     .catch(console.log)
+ }
+    var table = document.getElementById("myTable");
+
+    const Players = [
+    {name:"Kemba Walker", pts : 29.6 , reb : 4.4 , ast: 6.1 },
+    {name:"Lebron James", pts : 28.8 , reb : 7.7 , ast: 6.9 },
+    {name:"Joel Embiid", pts : 27.9 , reb : 13.1 , ast: 3.6 },
+    {name:"James Harden", pts : 27.8 , reb : 5.3 , ast: 7.3 },
+    {name:"Anthony Davis", pts :27.6 , reb : 12.4 , ast: 4.9 }
+    ]
+    let i = 0;
+    for (i = 0; i < Players.length; i++) {
+        let row = table.insertRow(i)
+        let cell0 = row.insertCell(0)
+        let cell1 = row.insertCell(1)
+        let cell2 = row.insertCell(2)
+        let cell3 = row.insertCell(3)
+        cell0.innerHTML = Players[i].name
+        cell1.innerHTML = Players[i].pts
+        cell2.innerHTML = Players[i].reb
+        cell3.innerHTML = Players[i].ast
+    }
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3)
+    cell1.innerHTML = "Name"
+    cell2.innerHTML = "PTS"
+    cell3.innerHTML = "REB"
+    cell4.innerHTML = "AST"
+
+
+    function Add() {
+        let table = document.getElementById("myTable");
+        let row = table.insertRow(table.rows.length)
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3)
+        //console.log(id.value)
+        cell1.innerHTML = Name.value
+        cell2.innerHTML = pts.value
+        cell3.innerHTML = reb.value
+        cell4.innerHTML = ast.value
+    }
+
+
+</script>
+<p>Name  <input type=text id=Name style="width:99px"> </p>
+<p>PTS <input type=number id=pts style="width:99px"> </p>
+<p>REB <input type=number id=reb style="width:99px"> </p>
+<p>AST <input type=number id=ast style="width:99px"> </p>
+<input type=button value="Add" onClick="Add()">
+
+
+<p> "Açıklama:" </p>
+<p> PTS = Points (Maç başı atılan sayı ortalaması) </p>
+<p> REB = Rebound (Ortalama Rebound) </p>
+<p> AST = Assist (Ortalama Assist) </p>
+
+<p>HW3: <a href="https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html">Homework 3</a></p>
+<p>My Repo: <a href="https://enestrz.github.io/AdvancedProgrammingWorks/">My Github Repo</a></p>
+</html>
