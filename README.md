@@ -7,3 +7,4 @@
 6. [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/cw5.html) 
 7. [ClassWork 6](https://enestrz.github.io/AdvancedProgrammingWorks/classwork6.html) 
 8. [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
+9. [ClassWork 7](https://enestrz.github.io/AdvancedProgrammingWorks/CW7/cw7.html)
