@@ -14,12 +14,7 @@
 </head>
 <table id="myTable"></table>
 <script>
-if ('serviceWorker' in navigator) {
-   navigator.serviceWorker
-     .register('sw.js')
-     .then((reg) => { console.log('SW Registered', reg) })
-     .catch(console.log)
- }
+
     var table = document.getElementById("myTable");
 
     const Players = [
@@ -80,6 +75,4 @@ if ('serviceWorker' in navigator) {
 <p> REB = Rebound (Ortalama Rebound) </p>
 <p> AST = Assist (Ortalama Assist) </p>
 
-<p>HW3: <a href="https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html">Homework 3</a></p>
-<p>My Repo: <a href="https://enestrz.github.io/AdvancedProgrammingWorks/">My Github Repo</a></p>
 </html>
