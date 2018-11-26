@@ -6,6 +6,12 @@
    <link rel="manifest" href="manifest.json">
 </head>
 <script>
+if ('serviceWorker' in navigator) {
+           navigator.serviceWorker
+               .register('sw.js')
+               .then((reg) => { console.log('SW Registered', reg) })
+               .catch(console.log)
+       }
 </script>
 <style>
 div{
@@ -53,8 +59,17 @@ div{
 
 
 
-
-
+<p><font color="darkblue"> Usefull Links <font>  </p>
+  <ul>
+        <li><a href="https://www.w3schools.com/"><font color="darkblue">w3schools <font></a></li>
+        <br>
+        <li><a href="https://developers.google.com/web/progressive-web-apps/"><font color="darkblue">Google Progressive Web Apps<font></a></li>
+        <br>
+        <li><a href="http://eloquentjavascript.net/"><font color="darkblue">Eloquent JavaScript<font></a></li>
+  	  <br>
+  	  <li><a href="https://maeyler.github.io/JS/PWA"><font color="darkblue">PWA Nasıl Yapılır<font></a></li>
+  	  <br>
+  </ul>
 
 
 
