@@ -1,10 +1,31 @@
 # AdvancedProgrammingWorks
-1. [ClassWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/CW1/charcount.html)
-2. [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
-3. [ClassWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/CW2/ArrayDemo.html)
-4. [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/CW3/inspector.html)
-5. [ClassWork 4](https://enestrz.github.io/AdvancedProgrammingWorks/CW4/index1.html)
-6. [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/CW5/cw5.html) 
-7. [ClassWork 6](https://enestrz.github.io/AdvancedProgrammingWorks/CW6/classwork6.html) 
-8. [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
-9. [ClassWork 7](https://enestrz.github.io/AdvancedProgrammingWorks/CW7/cw7.html)
+   
+ Class Works
+ 
+ [ClassWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/CW1/charcount.html)
+ 
+ [ClassWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/CW2/ArrayDemo.html)
+ 
+ [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/CW3/inspector.html)
+ 
+ [ClassWork 4](https://enestrz.github.io/AdvancedProgrammingWorks/CW4/index1.html)
+ 
+ [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/CW5/cw5.html) 
+ 
+ [ClassWork 6](https://enestrz.github.io/AdvancedProgrammingWorks/CW6/classwork6.html)
+ 
+ [ClassWork 7](https://enestrz.github.io/AdvancedProgrammingWorks/CW7/cw7.html)
+ 
+ 
+ Home Works
+ 
+ [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
+ 
+ [HomeWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/sumofrange.html)
+ 
+ [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
+ 
+ [Homework 4](https://enestrz.github.io/AdvancedProgrammingWorks/HW4/index.html)
+ 
+ 
+
