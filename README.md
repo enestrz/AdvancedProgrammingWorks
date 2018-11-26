@@ -25,7 +25,7 @@
  
  [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
  
- [Homework 4](https://enestrz.github.io/AdvancedProgrammingWorks/HW4/homework4.html)
+ [Homework 4](https://enestrz.github.io/AdvancedProgrammingWorks/HW4/index.html)
  
  
 
