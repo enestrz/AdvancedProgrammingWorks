@@ -1,6 +1,6 @@
 # AdvancedProgrammingWorks
 1. [ClassWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/CW1/charcount.html)
-2. [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW2/AddCourse.html)
+2. [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
 3. [ClassWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/CW2/ArrayDemo.html)
 4. [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/CW3/inspector.html)
 5. [ClassWork 4](https://enestrz.github.io/AdvancedProgrammingWorks/CW4/index1.html)
