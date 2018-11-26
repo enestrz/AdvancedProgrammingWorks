@@ -1,0 +1,14 @@
+{
+  "name": "Enes Terzi's PWA",
+  "start_url": "https://enestrz.github.io/AdvancedProgrammingWorks/HW4/index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
