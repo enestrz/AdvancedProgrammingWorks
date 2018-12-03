@@ -21,7 +21,7 @@
  
  [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
  
- [HomeWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/sumofrange.html)
+ [HomeWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/HW2/Database.html)
  
  [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
  
