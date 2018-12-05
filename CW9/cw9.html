@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SVG and Canvas </title>
+
+  <style>
+    svg, canvas {
+        background: cyan;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+<p>
+Renk Değiştir:  <input type="color" id="renk" value="#ff0000" onchange="colorChange()">
+</p>
+<p>
+  <input type=number id=ie value=40 style="width:40px"> &emsp; <input type=button value="Boyut Değiştir"  onClick="boyutDegistir()">
+
+</p>
+<p>
+  Yön değiştir
+    <input type=button value="∧"  onClick="yukarGit()">
+  </p>
+  <p>
+&emsp; &emsp;&emsp;&ensp; <input type=button value="<"  onClick="solaGit()">&emsp; <input type=button value=">"  onClick="sagaGit()">
+</p>
+<p>
+&emsp;&emsp;&emsp;&emsp;&emsp;  <input type=button value="v"  onClick="asagiGit()">
+</p>
+
+
+
+<svg id='svg' width='500' height='500'>
+  <circle id='circle1' cx='250' cy='250' r='40'
+  style='fill:yellow;stroke:blue;stroke-width:4' />
+</svg>
+
+
+
+
+<script>
+"use strict";
+function draw() {
+    cx.beginPath(); cx.lineWidth = 4;
+    cx.fillStyle = "yellow"; cx.strokeStyle = "blue";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black";
+    cx.fillText("arc",44,55);
+
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = "pink"; cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black";
+    cx.fillText("rect",148,55);
+}
+function colorChange(){
+  circle1.style.fill = document.getElementById('renk').value;
+}
+function boyutDegistir(){
+
+var s = Number(ie.value);
+circle1.setAttribute("r",s);
+
+}
+function solaGit(){
+  circle1.setAttribute("cx",circle1.cx.baseVal.value-10);
+}
+function sagaGit(){
+  circle1.setAttribute("cx",circle1.cx.baseVal.value+10);
+}
+function yukarGit(){
+  circle1.setAttribute("cy",circle1.cy.baseVal.value-10);
+}
+function asagiGit(){
+  circle1.setAttribute("cy",circle1.cy.baseVal.value+10);
+}
+</script>
+
+</body>
+</html>
