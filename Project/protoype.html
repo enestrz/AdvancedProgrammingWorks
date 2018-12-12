@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+    font-family: Arial;
+    color: white;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: #111;
+}
+
+.right {
+    right: 0;
+    background-color: red;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.mySlides {display:none;
+
+
+          }
+
+          .button {
+  background-color: #000000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  position: absolute;
+  bottom: 40px;
+  left: 47.5%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  position: absolute;
+  bottom: 40px;
+  left: 47.5%;
+}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0;position:relative; left: 47.5%; top:500px;}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered" >
+
+    <h2 id="soru"> </h2>
+
+
+  </div>
+</div>
+
+<div class="split right">
+
+  <div class="w3-content" >
+
+
+<h2 id=slidesContainer>
+
+
+
+</h2>
+
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+
+
+
+</div>
+
+<button class="button button2" onclick="degistir()">SELECT</button>
+
+  </div>
+</div>
+
+</body>
+<script>
+const questions = ["1. Soru","2. Soru","3. Soru"];
+const answers = [["1. Cevap","2. Cevap","3. Cevap"],["4. Cevap","5. Cevap","6. Cevap"],["7. Cevap","8. Cevap","9. Cevap"]];
+var sayi = 0;
+document.getElementById("soru").innerHTML = questions[sayi];
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function reset(){
+  slidesContainer.innerHTML=""
+  showDivs(1)
+}
+
+function degistir(){
+sayi = sayi+1;
+document.getElementById("soru").innerHTML = questions[sayi];
+
+if (sayi>2) {
+  document.getElementById("soru").innerHTML = "Result";
+  sayi = 0;
+}
+reset();
+}
+
+function yazdir(){
+answers[sayi].forEach(e => createSlides(e));
+
+}
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function createSlides(message){
+  var divUp = document.createElement("div");
+  divUp.className = "mySlides"
+  var divinner = document.createElement("div");
+  divinner.className = "w3-display-middle w3-large w3-container w3-padding-16 w3-black"
+  divinner.innerText=message
+  divUp.appendChild(divinner);
+slidesContainer.appendChild(divUp);
+}
+
+function showDivs(n) {
+  yazdir();
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+
+  var dots = document.getElementsByClassName("demo");
+  if (n > 3) {slideIndex = 1}
+  if (n < 1) {slideIndex = 3}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+
+}
+</script>
+</html>
