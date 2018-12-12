@@ -1,6 +1,6 @@
 {
   "name": "Enes Terzi's PWA",
-  "start_url": "/AdvancedProgrammingWorks/HW4/index.html",
+  "start_url": "/AdvancedProgrammingWorks/index.html",
   "display": "standalone",
   "background_color": "black",
   "theme_color": "black",
