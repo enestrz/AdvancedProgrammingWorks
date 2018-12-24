@@ -11,78 +11,140 @@
 *{
   font-family: lotrFont;
 }
-body {
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body,html {
+    height: 100%;
+  margin: 0;
+  }
+  #ekran1{
+
+
+    background-image:url(ekran1.jpg);
+
+      height:100%;
+
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+
+
+  #ekran3 {
+    background-color: black;
+      color: white;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+  }
+  #entrance{
+    position: absolute;
+    top: 50vh;
+    left: 32vw;
+
+
+  }
+  #e1buton{
+    position: absolute;
+    bottom:40vh;
+    left: 45vw;
+    right: 50vw;
+  }
+
+  #resultImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #resultText1{
+     text-align: center;
+  }
+  #testImg{
+  position: fixed;
+
+    display: block;
+    top: 5vh;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 12vw;
+
+  }
+  #soru {
+    position: absolute;
+     text-align: center;
+     left: 25%;
+     top: 50%;
+     font-size: 20px;
+  }
+  #refreshButon{
+    position: absolute;
+    left: 47%;
+
+  }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body,html {
+    height: 100%;
+  margin: 0;
+  }
+  #ekran1{
+
+    background-image:url(ekran1.jpg);
+
+      height:100%;
+
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+  #entrance{
+    position: absolute;
+    top: 40vh;
+    left: 22vw;
+
+
+  }
+  #e1buton{
+    position: absolute;
+    bottom:40vh;
+    left: 45vw;
+    right: 50vw;
+  }
+}
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body,html {
+    height: 100%;
+  margin: 0;
+  }
+  #ekran1{
+
+    background-image:url(ekran1.jpg);
+
+      height:100%;
+
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+}
+#Referans{
+
 
 }
-#ekran1{
-
-  background-color: black;
-  background-image:url(ekran1.jpg);
-    color: white;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
 
 
-}
 
-
-#ekran3 {
-  background-color: black;
-    color: white;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-#entrance{
-  position: absolute;
-  top: 50vh;
-  left: 32vw;
-
-
-}
-#e1buton{
-  position: absolute;
-  top: 60vh;
-  left: 45vw;
-}
-
-#resultImg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#resultText1{
-   text-align: center;
-}
-#testImg{
-position: fixed;
-
-  display: block;
-  top: 5vh;
-
-  margin-left: auto;
-  margin-right: auto;
-  left: 12vw;
-
-}
-#soru {
-  position: absolute;
-   text-align: center;
-   left: 25%;
-   top: 50%;
-   font-size: 20px;
-}
-#refreshButon{
-  position: absolute;
-  left: 47%;
-
-}
 .split {
     height: 100%;
     width: 50%;
@@ -158,10 +220,15 @@ position: fixed;
 .w3-badge {height:13px;width:13px;padding:0;position:relative; left: 47.5%; top:500px;}
 </style>
 </head>
+
 <body>
+
+
   <div id="ekran1" style="visibility:visible">
+
     <h2 id="entrance"><font face="lotrFont"  color="black" size="5vw">Hangi Yüzüklerin Efendisi Karakterisin?</font></h2>
     <input type="button" id="e1buton" onclick="gecisYap()" value="Maceraya Basla!">
+    <p id="Referans">  <a href="https://www.w3schools.com"><font color="white" size="2vw">Referans: w3schools</font></a></p>
   </div>
 
 
