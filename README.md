@@ -34,7 +34,7 @@
  
  Automata Home Works
  
- [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HomeWork1/autohw1.html)
+ [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork1/autohw1.html)
  
  Project
  
