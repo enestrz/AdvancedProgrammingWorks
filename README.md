@@ -1,6 +1,6 @@
 # AdvancedProgrammingWorks
    
- Class Works
+ JavaScript Class Works
  
  [ClassWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/CW1/charcount.html)
  
@@ -18,8 +18,11 @@
  
  [ClassWork 9](https://enestrz.github.io/AdvancedProgrammingWorks/CW9/cw9.html)
  
+ Automata Class Works
  
- Home Works
+ [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html
+ 
+ JavaScript Home Works
  
  [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
  
@@ -28,6 +31,10 @@
  [Homework 3](https://enestrz.github.io/AdvancedProgrammingWorks/HW3/homework3.html)
  
  [Homework 4](https://enestrz.github.io/AdvancedProgrammingWorks/index.html)
+ 
+ Automata Home Works
+ 
+ [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HomeWork1/autohw1.html
  
  Project
  
