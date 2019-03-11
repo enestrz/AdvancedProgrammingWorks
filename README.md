@@ -20,7 +20,7 @@
  
  Automata Class Works
  
- [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html
+ [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html)
  
  JavaScript Home Works
  
@@ -34,7 +34,7 @@
  
  Automata Home Works
  
- [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HomeWork1/autohw1.html
+ [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HomeWork1/autohw1.html)
  
  Project
  
