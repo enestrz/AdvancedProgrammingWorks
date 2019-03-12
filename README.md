@@ -20,6 +20,10 @@
  
  Automata Class Works
  
+ [ClassWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork1/DFA.html)
+ 
+ [ClassWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork2/classwork2.html)
+ 
  [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html)
  
  JavaScript Home Works
