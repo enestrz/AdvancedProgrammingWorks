@@ -26,6 +26,8 @@
  
  [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html)
  
+ [ClassWork 7](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork7/microJ3.html)
+ 
  JavaScript Home Works
  
  [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/HW1/AddCourse.html)
