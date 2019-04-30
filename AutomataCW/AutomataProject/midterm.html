@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Enes Terzi Term Project </title>
+</head>
+<style>
+@font-face {
+  font-family: matrixFont;
+  src: url(whitrabt.ttf);
+}
+*{
+  font-family: matrixFont;
+}
+body{
+    background-color: #96CCD4;
+}
+#ekran2{
+
+    height: 100vh;
+    width: 100vw;
+  }
+
+}
+#resim1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  #e1buton{
+    position:relative;
+    bottom:40vh;
+    left: 45vw;
+    right: 50vw;
+
+    }
+
+    .responsive{
+      width: 100%;
+      height: 100;   }
+</style>
+
+<body class="responsive">
+
+<h2 id=title></h2>
+<!-- Bu bölüm şimdilik yapım aşamasındadır  -->
+<!-- <div id=ekran1 style="visibility:visible">
+
+
+      <img src="morph.png" id=resim1 style="width:50%;">
+      <input type="button"  id="e1buton" onclick="gecisYap()" value="NFA to DFA Converter">
+
+</div> -->
+
+<div id=ekran2>
+
+  <h2>Problem Statement</h2>
+  <p>Let <b>X = (Q<sub>x</sub>, &sum;, &delta;<sub>x</sub>, q<sub>0</sub>, F<sub>x</sub>)</b> be an NDFA which accepts the language L(X). We have to design an equivalent DFA <b>Y = (Q<sub>y</sub>, &sum;, &delta;<sub>y</sub>, q<sub>0</sub>, F<sub>y</sub>)</b> such that <b>L(Y) = L(X)</b>. The following procedure converts the NDFA to its equivalent DFA &minus;</p>
+  <h2>Algorithm</h2>
+  <p><b>Input</b> &minus; An NDFA</p>
+  <p><b>Output</b> &minus; An equivalent DFA</p>
+  <p><b>Step 1</b> &minus; Create state table from the given NDFA.</p>
+  <p><b>Step 2</b> &minus; Create a blank state table under possible input alphabets for the equivalent DFA.</p>
+  <p><b>Step 3</b> &minus; Mark the start state of the DFA by q0 (Same as the NDFA).</p>
+  <p><b>Step 4</b> &minus; Find out the combination of States {Q<sub>0</sub>, Q<sub>1</sub>,... , Q<sub>n</sub>} for each possible input alphabet.</p>
+  <p><b>Step 5</b> &minus; Each time we generate a new DFA state under the input alphabet columns, we have to apply step 4 again, otherwise go to step 6.</p>
+  <p><b>Step 6</b> &minus; The states which contain any of the final states of the NDFA are the final states of the equivalent DFA.</p>
+  <h2>Example</h2>
+  <p>Let us consider the NDFA shown in the figure below.</p>
+  <img src="https://www.tutorialspoint.com/automata_theory/images/ndfa.jpg" alt="NDFA" />
+  <table style="text-align:center;" class="table table-bordered">
+  <tr>
+  <th style="text-align:center;">q</th>
+  <th style="text-align:center;">δ(q,0)</th>
+  <th style="text-align:center;">δ(q,1)</th>
+  </tr>
+  <tr>
+  <td>a</td>
+  <td>{a,b,c,d,e}</td>
+  <td>{d,e}</td>
+  </tr>
+  <tr>
+  <td>b</td>
+  <td>{c}</td>
+  <td>{e}</td>
+  </tr>
+  <tr>
+  <td>c</td>
+  <td>&empty;</td>
+  <td>{b}</td>
+  </tr>
+  <tr>
+  <td>d</td>
+  <td>{e}</td>
+  <td>&empty;</td>
+  </tr>
+  <tr>
+  <td>e</td>
+  <td>&empty;</td>
+  <td>&empty;</td>
+  </tr>
+  </table>
+  <p>Using the above algorithm, we find its equivalent DFA. The state table of the DFA is shown in below.</p>
+  <table style="text-align:center;" class="table table-bordered">
+  <tr>
+  <th style="text-align:center;">q</th>
+  <th style="text-align:center;">&delta;(q,0)</th>
+  <th style="text-align:center;">&delta;(q,1)</th>
+  </tr>
+  <tr>
+  <td>[a]</td>
+  <td>[a,b,c,d,e]</td>
+  <td>[d,e]</td>
+  </tr>
+  <tr>
+  <td>[a,b,c,d,e]</td>
+  <td>[a,b,c,d,e]</td>
+  <td>[b,d,e]</td>
+  </tr>
+  <tr>
+  <td>[d,e]</td>
+  <td>[e]</td>
+  <td>&empty;</td>
+  </tr>
+  <tr>
+  <td>[b,d,e]</td>
+  <td>[c,e]</td>
+  <td>[e]</td>
+  </tr>
+  <tr>
+  <td>[e]</td>
+  <td>&empty;</td>
+  <td>&empty;</td>
+  </tr>
+  <tr>
+  <td>[c, e]</td>
+  <td>&empty;</td>
+  <td>[b]</td>
+  </tr>
+  <tr>
+  <td>[b]</td>
+  <td>[c]</td>
+  <td>[e]</td>
+  </tr>
+  <tr>
+  <td>[c]</td>
+  <td>&empty;</td>
+  <td>[b]</td>
+  </tr>
+  </table>
+  <p>The state diagram of the DFA is as follows &minus;</p>
+  <img src="https://www.tutorialspoint.com/automata_theory/images/dfa_state_diagram.jpg" alt="State Diagram of DFA" />
+  <hr />
+</div>
+
+
+
+
+
+
+<script>
+"use strict";
+function gecisYap(){
+document.getElementById("ekran1").style.visibility = "hidden" ;
+document.getElementById("ekran2").style.visibility = "visible" ;
+}
+
+
+
+
+    title.innerText = document.title;
+
+
+
+</script>
+</body>
+</html>
