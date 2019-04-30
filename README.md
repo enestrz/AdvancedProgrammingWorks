@@ -42,9 +42,13 @@
  
  [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork1/autohw1.html)
  
- Project
+ JavaScript Project
  
- [Project 1](https://enestrz.github.io/AdvancedProgrammingWorks/Project/prototype.html)
+ [Project](https://enestrz.github.io/AdvancedProgrammingWorks/Project/prototype.html)
+ 
+ Automata Project
+ 
+ [Project](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/AutomataProject/termproject.html)
  
  
 
