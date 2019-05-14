@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NFA to DFA Converter </title>
+
+    <style>
+    #tablo {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 10%;
+    }
+
+    #tablo td, #tablo th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    }
+
+    #tablo tr:nth-child(even){background-color: #f2f2f2;}
+
+    #tablo tr:hover {background-color: #ddd;}
+
+    #tablo th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    #tablo2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 10%;
+    overflow: auto;
+    }
+
+    #tablo2 td, #tablo2 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #tablo2 tr:nth-child(even){background-color: #f2f2f2;}
+
+    #tabl2 tr:hover {background-color: #ddd;}
+
+    #tablo2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    #button2 {
+      display: inline-block;
+
+
+         transition: .5s ease;
+         top: 40%;
+         left: 3%;
+
+    }
+    #resim1{
+      display: flex;
+      float: right;
+      padding-left: 10px;
+      max-width: 50%;
+      max-height: 50%;
+    }
+    #resim2{
+      display: flex;
+      float: right;
+      padding-left: 10px;
+      max-width: 50%;
+      max-height: 50%;
+    }
+    body{
+        background-color: #ECF4F5;
+        max-width: 1000px;
+        max-height: 800px;
+      margin: auto;
+      background: white;
+      padding: 10px;
+    ;
+    }
+    .pagination {
+      display: inline-block;
+
+
+    }
+
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px ;
+
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 4px;
+
+    }
+
+    .pagination a.active {
+      background-color: #4CAF50;
+      color: white;
+
+    }
+
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+    div.input1{
+      padding-top: 20px;
+      padding-bottom: 100px;
+    }
+    div.butonee{
+      padding-top: 20px;
+    }
+
+    </style>
+
+</head>
+
+<body onload="ornekDegistir()">
+
+<h2 id=title></h2>
+
+
+
+<!-- Example String = <input id=input type=text value=01001010
+  onChange="test()"> &emsp; -->
+
+  <select id="mySelect"  onchange="ornekDegistir()">
+    <option value="Easy">Example 1</option>
+    <option value="Normal">Example 2</option>
+    <option value="Hard">Example 3</option>
+  </select>
+
+
+
+
+
+<hr />
+<b>Logic</b>
+<p id=cb></p>
+
+
+
+<div class="pagination">
+
+
+<p id=tableron1 >NFA:</p>
+<table id=tablo>
+  <img src="" id=resim1 />
+</table>
+
+
+
+
+  <div class="butonee" >
+    <input type=button id='button2' value="Convert DFA" onClick="dfaGoster()" >
+
+  </div>
+
+<hr />
+
+<p id=tableron2 style="visibility:hidden">DFA:</p>
+<table id=tablo2 style="visibility:hidden">
+  <img src="" id=resim2 />
+
+
+</table>
+<div class="input1" id="dfaButon" style="visibility:hidden">
+  Example String = <input id=input type=text value=0101 onChange="test()">
+  <pre id=out></pre>
+</div>
+
+<a href="page1.html">&laquo;</a>
+<a href="page1.html">1</a>
+<a href="page2.html">2</a>
+<a class="active"href="page3.html">3</a>
+
+</div>
+<!--p>Ref: <a href="https:xxx"
+   target="ExternalDocument">xxx</a>
+</p-->
+
+<script>
+var fState = 'C';
+
+function union(a, b) { //set operation using strings
+    let s = a
+    for (let x of b) if (!a.includes(x)) s += x
+    return s
+}
+function intersect(a, b) {
+    let s = ''
+    for (let x of b) if (a.includes(x)) s += x
+    return s
+}
+function delta(q, c) {
+    var x = document.getElementById("mySelect").value;
+    if (x=="Easy") {
+      fState = 'C'
+      if (q=='A' && c=='0') return 'C'
+      if (q=='B' && c=='1') return 'AC'
+      if (q=='C' && c=='0') return 'AB'
+      if (q=='C' && c=='1') return 'A'
+      return '';  //default -- no transition
+    }
+    if (x=="Normal") {
+      fState = 'B'
+      if (q=='A' && c=='0') return 'BCD'
+      if (q=='B' && c=='0') return 'BC'
+      if (q=='D' && c=='0') return 'E'
+      if (q=='A' && c=='1') return 'CD'
+      if (q=='B' && c=='1') return 'CD'
+      if (q=='C' && c=='1') return 'CDE'
+      if (q=='D' && c=='1') return 'CDE'
+      return '';  //default -- no transition
+    }
+    if (x=="Hard") {
+      fState = 'E'
+      if (q=='A' && c=='0') return 'ABCDE'
+      if (q=='B' && c=='0') return 'C'
+      if (q=='D' && c=='0') return 'E'
+      if (q=='A' && c=='1') return 'DE'
+      if (q=='B' && c=='1') return 'E'
+      if (q=='C' && c=='1') return 'B'
+      return '';  //default -- no transition
+    }
+    }
+
+function accept(w, F='C', Q='A') {
+    //w: input String
+    //F: final state(s)
+    //Q: current state(s)
+    let i = 0, txt = Q
+    while (i < w.length) {
+        let c = w[i], T=''
+        for (let q of Q)
+            T = union(T, delta(q, c))
+        Q = T
+        if (Q == '') break
+        i++; txt += ", "+c+" -> "+Q+'\n'+Q
+    }
+    input.selectionStart = i
+    input.selectionEnd = i+1
+    let a = intersect(Q, F).length > 0
+    return txt+'  '+(a? "Accept" : "Reject")
+}
+function test() {
+    let s = accept(input.value, fState);
+    console.log(s);  out.innerHTML = s
+}
+
+    title.innerText = document.title
+    sample.innerText = delta+'\n'+accept
+    function ornekDegistir() {
+      var x = document.getElementById("mySelect").value;
+      if (x == "Easy") {
+       tablo.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                         '<tr><td>>A</td><td>C</td><td>ϕ</td></tr> '+
+                         '<tr><td>B</td><td>ϕ</td><td>AC</td></tr>'+
+                         '<tr><td>*C</td><td>AB</td><td>A</td></tr>'  ;
+
+                         document.getElementById("resim1").src = "sekil1_1.JPG";
+
+      tablo2.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                        '<tr><td>>A</td><td>C</td><td>ϕ</td></tr> '+
+                        '<tr><td>*C</td><td>AB</td><td>A</td></tr>'+
+                        '<tr><td>AB</td><td>C</td><td>AC</td></tr>'+
+                        '<tr><td>*AC</td><td>ABC</td><td>A</td></tr>'+
+                        '<tr><td>*ABC</td><td>ABC</td><td>A</td></tr>';
+
+                         document.getElementById("resim2").src = "sekil1_2.JPG";
+       }
+
+
+      if (x == "Normal") {
+        tablo.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                          '<tr><td>>A</td><td>BCD</td><td>CD</td></tr> '+
+                          '<tr><td>*B</td><td>BC</td><td>CD</td></tr>'+
+                          '<tr><td>C</td><td>ϕ</td><td>CDE</td></tr>'+
+                          '<tr><td>D</td><td>E</td><td>CDE</td></tr>'+
+                          '<tr><td>E</td><td>ϕ</td><td>ϕ</td></tr>'  ;
+                           document.getElementById("resim1").src = "sekil2_1.JPG";
+
+        tablo2.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                          '<tr><td>>A</td><td>BCD</td><td>CD</td></tr> '+
+                          '<tr><td>*BCD</td><td>BCE</td><td>CDE</td></tr>'+
+                          '<tr><td>CD</td><td>E</td><td>CDE</td></tr>'+
+                          '<tr><td>*BDE</td><td>BC</td><td>CDE</td></tr>'+
+                          '<tr><td>*CDE</td><td>E</td><td>CDE</td></tr>'+
+                          '<tr><td>E</td><td>ϕ</td><td>ϕ</td></tr>'+
+                          '<tr><td>*BC</td><td>BC</td><td>CDE</td></tr>'  ;
+                          document.getElementById("resim2").src = "sekil2_2.JPG";
+      }   if (x == "Hard") {
+          tablo.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                            '<tr><td>>A</td><td>ABCDE</td><td>DE</td></tr> '+
+                            '<tr><td>B</td><td>C</td><td>E</td></tr>'+
+                            '<tr><td>C</td><td>ϕ</td><td>B</td></tr>'+
+                            '<tr><td>D</td><td>E</td><td>ϕ</td></tr>'+
+                            '<tr><td>*E</td><td>ϕ</td><td>ϕ</td></tr>' ;
+                            document.getElementById("resim1").src = "sekil3_1.JPG";
+        tablo2.innerHTML = '<tr><th>q</th><th>δ(q,0)</th><th>δ(q,1)</th></tr>  '+
+                          '<tr><td>>A</td><td>ABCDE</td><td>DE</td></tr> '+
+                          '<tr><td>*ABCDE</td><td>ABCDE</td><td>BDE</td></tr>'+
+                          '<tr><td>*DE</td><td>E</td><td>ϕ</td></tr>'+
+                          '<tr><td>BDE</td><td>CE</td><td>E</td></tr>'+
+                          '<tr><td>*E</td><td>ϕ</td><td>ϕ</td></tr>'+
+                          '<tr><td>*CE</td><td>ϕ</td><td>B</td></tr>'+
+                          '<tr><td>B</td><td>C</td><td>E</td></tr>'+
+                          '<tr><td>C</td><td>ϕ</td><td>B</td></tr>'
+                           ;
+                           document.getElementById("resim2").src = "sekil3_2.JPG";
+        }
+
+        button2.style.visibility = 'visible';
+        tablo2.style.visibility = 'hidden';
+        tableron2.style.visibility = 'hidden';
+        dfaButon.style.visibility = 'hidden';
+        resim2.style.visibility = 'hidden';
+
+    }
+    function dfaGoster(){
+
+      tablo2.style.visibility = 'visible';
+      tableron2.style.visibility = 'visible';
+      dfaButon.style.visibility = 'visible';
+      resim2.style.visibility = 'visible';
+
+    }
+    test()
+</script>
+
+</body>
+</html>

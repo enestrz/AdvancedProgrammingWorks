@@ -3,18 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Enes Terzi Term Project </title>
+    <title>NFA to DFA Converter</title>
 </head>
 <style>
-@font-face {
-  font-family: matrixFont;
-  src: url(whitrabt.ttf);
+img {
+  width: 100%;
+   height: 100%;
+   max-width: 50%;
+   object-fit: cover;
 }
-*{
-  font-family: matrixFont;
+table {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 10%;
 }
+
+table td, table th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}
+.pagination {
+  display: inline-block;
+  
+}
+
+.pagination a {
+  color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
 body{
-    background-color: #96CCD4;
+    background-color: white;
+    max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+;
 }
 #ekran2{
 
@@ -38,22 +85,15 @@ body{
 
     .responsive{
       width: 100%;
-      height: 100;   }
+      height: auto;   }
 </style>
 
-<body class="responsive">
+<body >
 
 <h2 id=title></h2>
-<!-- Bu bölüm şimdilik yapım aşamasındadır  -->
-<!-- <div id=ekran1 style="visibility:visible">
 
 
-      <img src="morph.png" id=resim1 style="width:50%;">
-      <input type="button"  id="e1buton" onclick="gecisYap()" value="NFA to DFA Converter">
-
-</div> -->
-
-<div id=ekran2>
+<div class="pagination">
 
   <h2>Problem Statement</h2>
   <p>Let <b>X = (Q<sub>x</sub>, &sum;, &delta;<sub>x</sub>, q<sub>0</sub>, F<sub>x</sub>)</b> be an NDFA which accepts the language L(X). We have to design an equivalent DFA <b>Y = (Q<sub>y</sub>, &sum;, &delta;<sub>y</sub>, q<sub>0</sub>, F<sub>y</sub>)</b> such that <b>L(Y) = L(X)</b>. The following procedure converts the NDFA to its equivalent DFA &minus;</p>
@@ -152,8 +192,12 @@ body{
   <p>The state diagram of the DFA is as follows &minus;</p>
   <img src="https://www.tutorialspoint.com/automata_theory/images/dfa_state_diagram.jpg" alt="State Diagram of DFA" />
   <hr />
+  <a href="page1.html">&laquo;</a>
+  <a href="page1.html">1</a>
+  <a class="active" href="page2.html">2</a>
+  <a href="page3.html">3</a>
+  <a href="page3.html">&raquo;</a>
 </div>
-
 
 
 
@@ -161,10 +205,7 @@ body{
 
 <script>
 "use strict";
-function gecisYap(){
-document.getElementById("ekran1").style.visibility = "hidden" ;
-document.getElementById("ekran2").style.visibility = "visible" ;
-}
+
 
 
 
