@@ -26,11 +26,7 @@
  
  [ClassWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork3/cw3.html)
  
- [ClassWork 4](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork4/cw4.html)
- 
- [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork5/cw5.html)
- 
- [ClassWork 6](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork6/cw6.html)
+ [ClassWork 5](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork5/Expression.html)
  
  [ClassWork 7](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/ClassWork7/microJ3.html)
  
@@ -48,9 +44,9 @@
  
  [HomeWork 1](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork1/autohw1.html)
  
- [HomeWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork2/autohw2.html)
+ [HomeWork 2](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork2/Expression.html)
   
- [HomeWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork3/autohw3.html)
+ [HomeWork 3](https://enestrz.github.io/AdvancedProgrammingWorks/AutomataCW/HomeWork3/microJ1.html)
    
  
  JavaScript Project
